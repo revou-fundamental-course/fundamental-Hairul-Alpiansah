@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            background: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1, h2, h3 {
+            color: #333;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            position: relative;
+        }
+        .section h2:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #ff4500;
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+        .info-list li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .info-list span {
+            font-weight: bold;
+            color: #ff4500;
+        }
+        .info-list .sub-info-list {
+            margin-left: 20px;
+        }
+        .toggle-content {
+            display: none;
+            margin-top: 10px;
+        }
+        .toggle-button {
+            background: #ff4500;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+        }
+        .toggle-button:hover {
+            background: #e63900;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .profile-container img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .profile-container .profile-info {
+            flex-grow: 1;
+        }
+        .rating-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .rating-section h2 {
+            margin-bottom: 10px;
+        }
+        .stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .stars input[type="radio"] {
+            display: none;
+        }
+        .stars label {
+            font-size: 30px;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .stars input[type="radio"]:checked ~ label {
+            color: #ff4500;
+        }
+        .stars label:hover,
+        .stars label:hover ~ label {
+            color: #ff4500;
+        }
+    </style>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>HAIRUL ALPIANSAH</h1>
+        <div class="profile-container">
+            <img src="my photo.png" alt="Foto Profil">
+            <div class="profile-info">
+                <div class="section">
+                    <h2>Informasi Pribadi</h2>
+                    <ul class="info-list">
+                        <li><span>Tempat dan Tanggal Lahir:</span> Pengkores, 24 Februari 2001</li>
+                        <li><span>Jenis Kelamin:</span> Laki-Laki</li>
+                        <li><span>Status Pernikahan:</span> Belum Menikah</li>
+                        <li><span>Kebangsaan:</span> Indonesia</li>
+                        <li><span>Agama:</span> Islam</li>
+                        <li><span>Alamat:</span> Pengkores, Kec.Kopang, Kab.Lombok Tengah</li>
+                        <li><span>Informasi Kontak:</span></li>
+                        <ul class="info-list sub-info-list">
+                            <li><span>Nomor Telepon:</span> 087806517631</li>
+                            <li><span>Alamat Email:</span> haerulalpiansah302@gmail.com</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Pendidikan</h2>
+            <button class="toggle-button" onclick="toggleContent('pendidikan')">Klik</button>
+            <div id="pendidikan" class="toggle-content">
+                <ul class="info-list">
+                    <li><span>Latar Belakang Pendidikan:</span></li>
+                    <ul class="info-list sub-info-list">
+                        <li>Universitas Mataram, 2019-2024</li>
+                        <li>SMAN 1 Kopang, 2016-2019</li>
+                        <li>SMPN 3 Kopang, 2013-2016</li>
+                        <li>SDN Renggung, 2010-2013</li>
+                    </ul>
+                    <li><span>Prestasi Akademik:</span></li>
+                    <ul class="info-list sub-info-list">
+                        <li>Mendapatkan IPK 3.80 Dengan Predikat Cumlaude</li>
+                        <li>Mendapatkan Beasiswa BIDIKMISI, 2019-2023</li>
+                        <li>Mendapatkan Beasiswa KIP, 2016-2019</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Pengalaman Kerja</h2>
+            <button class="toggle-button" onclick="toggleContent('pengalaman')">Klik</button>
+            <div id="pengalaman" class="toggle-content">
+                <ul class="info-list">
+                    <li><span>Riwayat Pekerjaan:</span></li>
+                    <ul class="info-list sub-info-list">
+                        <li>Asisten Dosen, Universitas Mataram, 5 Januari 2024-Sekarang</li>
+                    </ul>
+                    <li><span>Tanggung Jawab Pekerjaan dan Prestasi:</span></li>
+                    <ul class="info-list sub-info-list">
+                        <li>Saya bekerja sebagai asisten dosen dan memiliki tugas untuk mem-back up penelitian yang dilakukan oleh dosen tersebut khususnya dalam hal pendataan, pembuatan buku dan pembuatan peta penelitian. Sejauh ini prestasi yang saya dapatkan yaitu berhasil dalam pembuatan desain cover buku yang akan dipublikasikan dan berhasil dalam membuat peta penelitian dalam setiap penelitian yang dilakukan oleh dosen tersebut.</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Keterampilan dan Kemampuan</h2>
+            <button class="toggle-button" onclick="toggleContent('keterampilan')">Klik</button>
+            <div id="keterampilan" class="toggle-content">
+                <ul class="info-list">
+                    <li><span>Keterampilan Teknis:</span>
+                        <p>Saya memiliki kemampuan untuk menggunakan berbagai perangkat lunak dan perangkat keras komputer dengan baik. Saya mahir dalam Microsoft Office Suite, penjelajahan internet, dan beberapa aplikasi khusus yang terkait dengan pekerjaan saya.</p>
+                        <p>Saya memiliki pengalaman dalam pemrograman menggunakan bahasa pemrograman seperti Python dan Java. Saya dapat menggunakan bahasa pemrograman ini untuk menyelesaikan berbagai tugas, seperti membangun aplikasi, menganalisis data, dan mengotomatiskan proses.</p>
+                        <p>Saya memiliki pemahaman yang baik tentang jaringan komputer dan internet. Saya dapat mengkonfigurasi jaringan komputer, memecahkan masalah jaringan, dan menjaga keamanan jaringan.</p>
+                        <p>Saya memiliki kemampuan untuk menggunakan perangkat lunak desain grafis seperti Adobe Photoshop dan Illustrator untuk membuat gambar, grafik, dan desain tata letak.</p>
+                        <p>Saya memiliki kemampuan untuk mengedit video dan audio menggunakan perangkat lunak multimedia seperti Adobe Premiere Pro dan Audacity.</p> 
+                    </li>
+                    <li><span>Keterampilan Bahasa:</span>
+                        <p>Saya memiliki kemampuan bahasa Indonesia yang sangat baik, hal ini dibuktikan dengan saya berhasil menyelesaikan perkuliahan saya dan mendapatkan gelar S.Pd.</p>
+                        <p>Saya memiliki kemampuan bahasa Inggris di tingkat intermediate. Saya telah mengikutites bahasa Inggris resmi seperti TOEFL untuk mengukur kemampuan saya secara objektif. Hasil tes tersebut menunjukkan tingkat keterampilan saya yang berada di tingkat intermediate, dengan skor 450 untuk TOEFL.</p>
+                        <p>Selain itu, saya aktif mengikuti berbagai kegiatan dan program yang berkaitan dengan bahasa Inggris, seperti kelas bahasa Inggris dan berbagai webinar bahasa Inggris. Partisipasi aktif dalam kegiatan-kegiatan tersebut membantu saya meningkatkan kemampuan bahasa Inggris saya secara menyeluruh, baik dalam aspek berbicara, mendengarkan, membaca, maupun menulis.</p>
+                        <p>Selain itu, saya juga aktif mengikuti kelas bahasa Korea. Partisipasi aktif dalam kelas tersebut membantu saya meningkatkan kemampuan bahasa Korea saya sedikit demi sedikit.</p> 
+                    </li>
+                    <li><span>Keterampilan Lunak:</span> 
+                        <p>Saya memiliki kemampuan belajar yang baik. Saya selalu senang mempelajari hal-hal baru dan mengembangkan diri. Saya memiliki rasa ingin tahu yang tinggi dan mampu memahami konsep-konsep baru dengan cepat. Kemampuan ini memungkinkan saya untuk terus berkembang dan beradaptasi dengan perubahan di tempat kerja.</p>
+                        <p>Saya memiliki kemampuan memecahkan masalah yang baik. Saya mampu mengidentifikasi masalah dengan cepat dan akurat, dan kemudian mengembangkan solusi yang kreatif dan efektif. Saya juga memiliki kemampuan untuk berpikir kritis dan analitis, yang memungkinkan saya untuk menganalisis berbagai solusi dan memilih yang terbaik. Kemampuan ini memungkinkan saya untuk berkontribusi secara signifikan dalam menyelesaikan berbagai tantangan di tempat kerja.</p>
+                        <p>Saya memiliki kemampuan interpersonal yang baik. Saya senang bekerja sama dengan orang lain dan mampu menyelesaikan konflik dengan cara yang konstruktif. Saya juga memiliki rasa empati yang tinggi dan mampu memahami perasaan orang lain. Kemampuan ini memungkinkan saya untuk menciptakan lingkungan kerja yang positif dan kolaboratif.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Informasi Tambahan</h2>
+            <button class="toggle-button" onclick="toggleContent('informasi-tambahan')">Klik</button>
+            <div id="informasi-tambahan" class="toggle-content">
+                <ul class="info-list">
+                    <li><span>Sertifikasi atau Pelatihan:</span>
+                        <p>Pelatihan Menyusun Modul Ajar Dengan AI</p>
+                        <p>Pelatihan Memperkaya Teknologi dan Media Ajar Kurikulum Merdeka</p>
+                        <p>Pelatihan Fundamental of Professional Programming</p>
+                        <p>Kelas EF Talks</p>
+                        <p>Kursus Introduction to Critical Infrastructure Protection</p>
+                        <p>Kursus Intro to Python</p>
+                        <p>Basics of Data Science</p>
+                        <p>Webinar AI Hacks</p>
+                        <p>Webinar Software Tester</p> 
+                    </li>
+                    <li><span>Hobi:</span>
+                        <p>Membaca</p>
+                        <p>Bermain Laptop</p>
+                        <p>Latihan Membuat Website</p>
+                        <p>Latihan Programming</p> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rating-section">
+            <h2>Beri Rating Website Ini</h2>
+            <div class="stars">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
